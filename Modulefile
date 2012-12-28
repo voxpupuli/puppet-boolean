@@ -1,5 +1,5 @@
 name    'adrien-boolean'
-version '0.9.0-rc1'
+version '0.9.0'
 author  'Adrien Thebo <adrien@somethingsinistral.net>'
 license 'Apache 2.0'
 
