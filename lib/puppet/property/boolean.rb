@@ -1,39 +1,25 @@
 require 'puppet/property'
 
 class Puppet::Property::Boolean < Puppet::Property
-  # An actual boolean property.
-
   module Ontology
-    # Hellooooo philosophy.
 
-    # Determine truth.
-    #
-    # One must ask - what is true? Is truth subjective? Is your true my true?
-    # Is the concept of truth the same across the universe?
-    #
-    # Of course, the answer is everything here and nothing else. Period.
-    # THIS IS ALL THAT IS REAL.
+    # All values that are considered 'true' by Puppet internals
     def true_values
       [true, 'true', :true, :yes, 'yes']
     end
 
-    # Determine falsehood.
-    #
-    # Conversely, this is everything that is false. Because you can't have
-    # nothing isn't, that would lead to all sorts of weird. Like gigantic ants
-    # with top hats laying waste to Manhattan. That would be bad.
+    # All values that are considered 'false' by Puppet internals
     def false_values
       [false, 'false', :false, :no, 'no', :undef, nil]
     end
 
-    # Convert subjective values into absolutism.
+    # Normalize Boolean values
     #
     # @param [Object] v Something that vaguely resembles a boolean
     #
     # @raise [ArgumentError] The supplied parameter cannot be normalized.
     #
-    # @return [TrueClass]
-    # @return [FalseClass]
+    # @return [true, false]
     def munge(v)
       if true_values.include? v
         true
@@ -72,11 +58,7 @@ class Puppet::Property::Boolean < Puppet::Property
   end
 
   # Determine if the boolean property is in sync.
-  #
-  # Really, what is? How do we determine what is?
   def insync?(is)
     munge(is) == should
   end
 end
-
-# This is the most smug code that I've ever written. I'm sorry.
