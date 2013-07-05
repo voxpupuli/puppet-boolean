@@ -6,14 +6,9 @@ Define actual boolean properties for puppet types.
 Synopsis
 --------
 
-More often than not, philosophy majors will try to convince you that truth is
-subjective and that there may be more than one single and absolute truth. With
-this boolean property you can wipe that smug look off of their face and say
-that there is absolute truth and it's defined RIGHT HERE.
-
-In short, use this module to define actual boolean properties in Puppet so
-that you can reliably get f%$king booleans instead of doing munging values all
-over your code.
+Puppet has loosely defined internal types which can make normalizing boolean
+values in types and providers difficult. This custom property handles that
+normalization in one place by defining actual boolean states.
 
 Example
 -------
@@ -63,8 +58,3 @@ Contact
 
 If you have questions or concerns about this module, contact finch on #puppet
 on Freenode, or email adrien@puppetlabs.com.
-
-Caveats
--------
-
-This is a very smug module. I can't help myself.
