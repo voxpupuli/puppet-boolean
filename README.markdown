@@ -1,14 +1,14 @@
 puppet-boolean
 ==============
 
-Define actual boolean properties for puppet types.
+Define actual boolean parameters and properties for puppet types.
 
 Synopsis
 --------
 
 Puppet has loosely defined internal types which can make normalizing boolean
-values in types and providers difficult. This custom property handles that
-normalization in one place by defining actual boolean states.
+values in types and providers difficult. This custom parameter and property
+will handle that normalization in one place by defining actual boolean states.
 
 Example
 -------
@@ -20,6 +20,11 @@ Example
     Puppet::Type.newtype(:awesome) do
 
       newparam(:name, :namevar => true)
+
+      newparam(:more_explosions, :parent => Puppet::Parameter::Boolean) do
+        desc "Indicate that more explosions are neccessary"
+        defaultto true # When it doubt, we want more explosions
+      end
 
       newproperty(:betterthanslicedbread, :parent => Puppet::Property::Boolean) do
         desc "Determine if the thing is more awesome than sliced bread"
@@ -45,6 +50,7 @@ Example
 **Type usage**:
 
     awesome { 'actual booleans':
+      more_explosions                => 'yes',  # Use yes as a quoted string!
       better_than_rocket_boots       => true,   # Use an unquoted string!
       better_than_sliced_bread       => 'true', # Use a quoted string!
       suitable_for_human_consumption => no,     # Use yes and no! It doesn't matter!
