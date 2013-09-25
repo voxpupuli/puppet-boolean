@@ -26,7 +26,7 @@ Example
         defaultto true # When it doubt, we want more explosions
       end
 
-      newproperty(:betterthanslicedbread, :parent => Puppet::Property::Boolean) do
+      newproperty(:better_than_sliced_bread, :parent => Puppet::Property::Boolean) do
         desc "Determine if the thing is more awesome than sliced bread"
         defaultto true # It's not hard to be more awesome than sliced bread
       end
