@@ -1,5 +1,6 @@
 module PuppetX
-  module Util;
+  module Util
+  end
 end
 
 module PuppetX::Util::Boolean

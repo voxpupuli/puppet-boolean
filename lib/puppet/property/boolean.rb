@@ -1,5 +1,11 @@
-require 'puppet_x/util/boolean'
 require 'puppet/property'
+
+begin
+  require 'puppet_x/util/boolean'
+rescue LoadError => e
+  libdir = Pathname.new(__FILE__).parent.parent.parent
+  require File.join(libdir, 'puppet_x/util/boolean')
+end
 
 class Puppet::Property::Boolean < Puppet::Property
   include PuppetX::Util::Boolean
