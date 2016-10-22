@@ -2,7 +2,7 @@ require 'puppet/property'
 
 begin
   require 'puppet_x/util/boolean'
-rescue LoadError => e
+rescue LoadError
   libdir = Pathname.new(__FILE__).parent.parent.parent
   require File.join(libdir, 'puppet_x/util/boolean')
 end
