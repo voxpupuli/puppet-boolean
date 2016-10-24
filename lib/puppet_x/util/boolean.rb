@@ -5,7 +5,6 @@ end
 
 module PuppetX::Util::Boolean
   module Ontology
-
     # All values that are considered 'true' by Puppet internals
     def true_values
       [true, 'true', :true, :yes, 'yes']
