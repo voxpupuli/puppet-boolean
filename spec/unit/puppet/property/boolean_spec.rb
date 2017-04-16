@@ -3,6 +3,7 @@ require 'puppet/property/boolean'
 
 describe Puppet::Property::Boolean do
   subject { described_class.new(resource: resource) }
+
   let(:resource) { mock('resource') }
 
   [true, :true, 'true', :yes, 'yes'].each do |arg|
