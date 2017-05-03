@@ -22,7 +22,7 @@ Example
       newparam(:name, :namevar => true)
 
       newparam(:more_explosions, :parent => Puppet::Parameter::Boolean) do
-        desc "Indicate that more explosions are neccessary"
+        desc "Indicate that more explosions are necessary"
         defaultto true # When it doubt, we want more explosions
       end
 
