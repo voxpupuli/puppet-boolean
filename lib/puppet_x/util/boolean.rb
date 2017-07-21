@@ -12,7 +12,7 @@ module PuppetX::Util::Boolean
 
     # All values that are considered 'false' by Puppet internals
     def false_values
-      [false, 'false', :false, :no, 'no', :undef, nil]
+      [false, 'false', :false, :no, 'no', :undef, nil, :absent]
     end
 
     # Normalize Boolean values
