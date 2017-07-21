@@ -11,7 +11,7 @@ describe Puppet::Property::Boolean do
       subject.munge(arg).should == true
     end
   end
-  [false, :false, 'false', :no, 'no', :undef, nil].each do |arg|
+  [:absent, false, :false, 'false', :no, 'no', :undef, nil].each do |arg|
     it "should munge #{arg.inspect} as false" do
       subject.munge(arg).should == false
     end
@@ -20,5 +20,8 @@ describe Puppet::Property::Boolean do
     it "should fail to munge #{arg.inspect}" do
       expect { subject.munge(arg) }.to raise_error ArgumentError
     end
+  end
+  it "fail to munge 'woof' with a specific message" do
+    expect { subject.munge('woof') }.to raise_error ArgumentError, %r{Value 'woof':String cannot be determined as a boolean value}
   end
 end

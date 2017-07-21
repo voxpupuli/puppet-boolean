@@ -28,7 +28,7 @@ module PuppetX::Util::Boolean
       elsif false_values.include? v
         false
       else
-        raise ArgumentError, "Value '#{value}':#{value.class} cannot be determined as a boolean value"
+        raise ArgumentError, "Value '#{v}':#{v.class} cannot be determined as a boolean value"
       end
     end
   end
