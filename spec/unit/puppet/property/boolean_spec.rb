@@ -4,7 +4,7 @@ require 'puppet/property/boolean'
 describe Puppet::Property::Boolean do
   subject { described_class.new(resource: resource) }
 
-  let(:resource) { mock('resource') }
+  let(:resource) { instance_double('resource') }
 
   [true, :true, 'true', :yes, 'yes'].each do |arg|
     it "should munge #{arg.inspect} as true" do
