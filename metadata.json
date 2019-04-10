@@ -7,9 +7,7 @@
   "source": "https://github.com/voxpupuli/puppet-boolean",
   "project_page": "https://github.com/voxpupuli/puppet-boolean",
   "issues_url": "https://github.com/voxpupuli/puppet-boolean/issues",
-  "dependencies": [
-
-  ],
+  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -50,7 +48,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.0 < 7.0.0"
+      "version_requirement": ">= 5.5.8 < 7.0.0"
     }
   ],
   "tags": [
