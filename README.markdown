@@ -1,6 +1,11 @@
 puppet-boolean
 ==============
 
+
+**This module is archived! Do not use it anymore**
+
+The discussion happened in https://github.com/voxpupuli/puppet-boolean/issues/34
+
 Define actual boolean parameters and properties for puppet types.
 
 Synopsis
